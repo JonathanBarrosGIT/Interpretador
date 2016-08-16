@@ -6,19 +6,19 @@ public class Interpreter {
 		String userInput, rs1 = "", rs2 = "";
 		int resultadoA = 0, r1 = 0, r2 = 0;
 		boolean resultadoB = false, rb1 = false, rb2 = false;
-		
-		System.out.println("Digite a instrução que queira realizar ou digite '?' "
+
+		System.out.println("Digite a instruÃ§Ã£oo que queira realizar ou digite '?' "
 				+ "para ajuda:");
-		
+
 		Scanner input = new Scanner(System.in);
-		
+
 		userInput = input.nextLine();
-		
+
 		if(userInput.equals("?")){
-			System.out.println("Funções disponíveis: somar, multiplicar, dividir, "
+			System.out.println("FunÃ§Ãµes disponÃ­veis: somar, multiplicar, dividir, "
 					+ "subtrair, stringComp, numberEqual, maior, menor, and e or.");
 		}
-		
+
 		else{
 			switch(userInput){
 			case "somar":
@@ -52,7 +52,7 @@ public class Interpreter {
 				resultadoB = BitWise.numberR1Lower(r1, r2);
 				break;
 			default:
-				System.out.println("Instrução não encontrada.");
+				System.out.println("InstruÃ§Ã£o nÃ£o encontrada.");
 			}
 		}
 	}
