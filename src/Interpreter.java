@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Interpreter {
 
 	public static void main(String[] args) {
-		String userInput;
-		int resultadoA = 0, r1, r2;
-		boolean resultadoB = false, rb1, rb2;
+		String userInput, rs1 = "", rs2 = "";
+		int resultadoA = 0, r1 = 0, r2 = 0;
+		boolean resultadoB = false, rb1 = false, rb2 = false;
 		
 		System.out.println("Digite a instrução que queira realizar ou digite '?' "
 				+ "para ajuda:");
@@ -14,7 +14,7 @@ public class Interpreter {
 		
 		userInput = input.nextLine();
 		
-		if(userInput == "?"){
+		if(userInput.equals("?")){
 			System.out.println("Funções disponíveis: somar, multiplicar, dividir, "
 					+ "subtrair, stringComp, numberEqual, maior, menor, and e or.");
 		}
@@ -40,16 +40,16 @@ public class Interpreter {
 				resultadoB = Booleano.or(rb1, rb2);
 				break;
 			case "stringComp":
-				resultadoB = BitWise.stringComp(rb1, rb2);
+				resultadoB = BitWise.stringComp(rs1, rs2);
 				break;
 			case "igual":
-				resultadoB = BitWise.numberEqual(rb1, rb2);
+				resultadoB = BitWise.numberEqual(r1, r2);
 				break;
 			case "maior":
-				resultadoB = BitWise.numberR1Great(rb1, rb2);
+				resultadoB = BitWise.numberR1Great(r1, r2);
 				break;
 			case "menor":
-				resultadoB = BitWise.numberR1Lower(rb1, rb2);
+				resultadoB = BitWise.numberR1Lower(r1, r2);
 				break;
 			default:
 				System.out.println("Instrução não encontrada.");
